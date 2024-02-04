@@ -2,7 +2,6 @@
 require_once 'carta_class.php';
 class jugador
 {
-
     private $Nombre;
     private $Cartas = array();
 
@@ -15,10 +14,12 @@ class jugador
     {
         return $this->Nombre;
     }
+
     function setNombre($n)
     {
         $this->Nombre = $n;
     }
+
     function setCartas($carta)
     {
         $this->Cartas[] = $carta;
@@ -53,11 +54,11 @@ class jugador
         }
         echo ' <a href="' . $_SERVER['PHP_SELF'] . '?pasa=1">Robar</a> ';
     }
+    
     function ContarCartas()
     {
         echo count($this->Cartas);
         return count($this->Cartas);
-
     }
     function MostrarPDF()
     {

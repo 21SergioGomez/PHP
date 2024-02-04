@@ -2,11 +2,8 @@
 
 class carta
 {
-
     public $numero;
     public $color;
-
-    ///constructor
 
     function __construct($numero, $color)
     {
@@ -16,10 +13,8 @@ class carta
 
     function mostrar_carta()
     {
-        echo ' <img src="img/uno/'.$this->numero.'_'.$this->color.'.png"/> ';
+        echo ' <img src="img/uno/' . $this->numero . '_' . $this->color . '.png"/> ';
     }
-
-   
 
     /**
      * Get the value of numero
@@ -28,13 +23,13 @@ class carta
     {
         return $this->numero;
     }
+
     /**
      * @return  self
      */
     public function setNumero($numero)
     {
         $this->numero = $numero;
-
         return $this;
     }
 
@@ -45,13 +40,13 @@ class carta
     {
         return $this->color;
     }
+
     /**
      * @return  self
      */
     public function setColor($color)
     {
         $this->color = $color;
-
         return $this;
     }
 }
