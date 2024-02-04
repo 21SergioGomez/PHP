@@ -15,31 +15,13 @@ session_start();
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" type="image/x-icon" href="imagenes/locomotora.png">
    <title>Locomotora</title>
-   <style>
-      body {
-         padding-top: 2%;
-         background-color: white;
-         font-family: "Protest Guerrilla", sans-serif;
-         font-weight: 400;
-         font-style: normal;
-         margin: auto;
-         text-align: center;
-         background-color: #b8b7b6;
-      }
-
-      #viajeros {
-         font-size: 1.5em;
-         width: 100%;
-         margin-top: 3%;
-      }
-   </style>
+   <link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 
 <body>
    <h1>Estación de tren</h1>
    <?php
 
-   // si no esta seteada la sesion estacion la seteas y me creas sesion viajeros i estacoin que es un objeto Estacion.
    if (!isset($_SESSION['estacion']) && !isset($_SESSION['viajeros'])) {
       $_SESSION['viajeros'] = 0;
 
@@ -56,7 +38,7 @@ session_start();
          $_SESSION['viajeros'] = $_SESSION['viajeros'] + 10;
       }
    }
-   // nuevo tren (reset trenes dnadole a la locomotra)
+   // nuevo tren (reset locomotra)
    if (isset($_REQUEST['locomoto'])) {
       $_SESSION['estacion']->trenes[$_REQUEST['locomoto']] =  $_SESSION['estacion']->nuevoTren();
    }

@@ -6,7 +6,6 @@ class Tren
 
     public function __construct()
     {
-
         $numvagones = rand(3, 6);
 
         for ($i = 0; $i < $numvagones; $i++) {
